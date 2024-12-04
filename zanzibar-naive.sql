@@ -138,7 +138,7 @@ JOIN relation as rel3 on rules.derived_relation = rel3.name;
 
 -- Compute transitive closure of `rules` over the object-relation graph
 -- defined by `edges`.
-CREATE RECURSIVE VIEW relationships (
+DECLARE RECURSIVE VIEW relationships (
     object1 BIGINT NOT NULL,
     object2 BIGINT NOT NULL,
     relation INT NOT NULL

@@ -155,7 +155,7 @@ CREATE TABLE subscriptions (
 );
 
 -- Subset of edges relevant to maintaining subscriptions. 
-CREATE RECURSIVE VIEW relevant_edges (
+DECLARE RECURSIVE VIEW relevant_edges (
     object1 BIGINT NOT NULL,
     object2 BIGINT NOT NULL,
     relation INT NOT NULL
@@ -179,7 +179,7 @@ UNION ALL
  FROM object_edges JOIN relevant_edges ON object_edges.object2 = relevant_edges.object1);
 
 -- Compute transitiove closure of `rules` over `relevant_edges`.
-CREATE RECURSIVE VIEW relationships (
+DECLARE RECURSIVE VIEW relationships (
     object1 BIGINT NOT NULL,
     object2 BIGINT NOT NULL,
     relation INT NOT NULL
