@@ -1,6 +1,6 @@
 # Implementation of a simplified Zanzibar authorization model in Feldera
 
-This repository contains to implementations of the authorization model from the
+This repository contains two implementations of the authorization model from the
 Zanzibar paper using Feldera.
 
 ## Authorization model
