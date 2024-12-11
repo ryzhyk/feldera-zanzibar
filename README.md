@@ -10,7 +10,7 @@ Zanzibar paper using Feldera.
 
 * **Rules:** In this example we model binary rules of the form "if there is a
   relation R1 between objects O1 and O2, and a relation R2 between objects O2
-  and O3, then there is a relation R3 betweeb O1 and O3".
+  and O3, then there is a relation R3 between O1 and O3".
 
 * **Object graph:** Models the set of relationships provided as input to the
   system.  Serves as the starting point for evaluating authorization rules.
@@ -47,7 +47,7 @@ subscribed-to object.
 The `zanzibar-ondemand.sql` program adds this optimization to the naive
 implementation above.  In addition to a stream of changes to the object graph,
 it maintains a constantly changing set of 10000 subscriptions.  This
-implementations runs ~100x faster and uses 10x less memory than the naive
+implementation runs ~100x faster and uses 10x less memory than the naive
 implementation.
 
 ## How to run
